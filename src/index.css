@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Resultify Light Theme - Royal Blue + Mint Glassmorphism */
+    --background: 217 33% 97%; /* #F6F8FB */
+    --foreground: 217 71% 9%; /* #0F1724 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 217 71% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 71% 9%;
+
+    --primary: 217 94% 58%; /* #2D7FF9 Royal Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 158 67% 68%; /* #7DE3B8 Mint */
+    --secondary-foreground: 217 71% 9%;
+
+    --muted: 217 20% 93%;
+    --muted-foreground: 217 20% 45%;
+
+    --accent: 158 67% 68%; /* Mint accent */
+    --accent-foreground: 217 71% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 25% 88%;
+    --input: 217 25% 88%;
+    --ring: 217 94% 58%;
+
+    --radius: 0.75rem;
+
+    /* Glass effect colors */
+    --glass-light: 0 0% 100% / 0.55;
+    --glass-border: 217 94% 58% / 0.15;
+    --glass-shadow: 217 50% 20% / 0.08;
+  }
+
+  .dark {
+    /* Resultify Dark Theme - Deep Blue + Mint Glow */
+    --background: 220 60% 6%; /* #0B1020 */
+    --foreground: 217 33% 93%; /* #E6EEF8 */
+
+    --card: 220 50% 10%;
+    --card-foreground: 217 33% 93%;
+
+    --popover: 220 50% 10%;
+    --popover-foreground: 217 33% 93%;
+
+    --primary: 217 85% 56%; /* #1E6BE0 Darker Royal Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 158 67% 68%; /* #7DE3B8 Mint stays vibrant */
+    --secondary-foreground: 220 60% 6%;
+
+    --muted: 220 40% 15%;
+    --muted-foreground: 217 20% 65%;
+
+    --accent: 158 67% 68%;
+    --accent-foreground: 220 60% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 40% 18%;
+    --input: 220 40% 18%;
+    --ring: 217 85% 56%;
+
+    /* Glass effect colors */
+    --glass-dark: 220 45% 12% / 0.45;
+    --glass-border: 217 85% 56% / 0.2;
+    --glass-shadow: 220 80% 5% / 0.3;
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply backdrop-blur-xl bg-white/55 border border-white/20 shadow-lg;
+  }
+
+  .dark .glass {
+    @apply bg-[hsl(var(--glass-dark))] border-[hsl(var(--glass-border))] shadow-2xl;
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:border-primary/30;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full hover:bg-primary/50;
+  }
+}

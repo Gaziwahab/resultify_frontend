@@ -1,0 +1,4 @@
+college,course,roll_no,name,mobile_no,subject_1_name,subject_1_marks,subject_1_max,subject_2_name,subject_2_marks,subject_2_max,subject_3_name,subject_3_marks,subject_3_max,subject_4_name,subject_4_marks,subject_4_max
+PCTE College,B.Tech CSE,1001,Gazi Wahab,9876543210,Physics,87,100,Mathematics,90,100,Computer Science,85,100,English,80,100
+PCTE College,B.Tech CSE,1002,Priya Sharma,9876543211,Physics,92,100,Mathematics,95,100,Computer Science,88,100,English,85,100
+DAV College,B.Tech CSE,2001,Rahul Kumar,9876543212,Physics,78,100,Mathematics,82,100,Computer Science,80,100,English,75,100
